@@ -1,0 +1,38 @@
+.wrapper {
+  padding: 50px 0;
+}
+
+.wrapper-inner {
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1280px;
+}
+
+.dialogBox, .board {
+  background: #eeeeee;
+  padding: 10px;
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.board {
+  display: inline-block;
+  background: #004400;
+  min-width: 100px;
+  min-height: 100px;
+  color: #ffffff;
+}
+
+.square {
+  display: inline-block;
+  border: 1px white solid;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 70px;
+  vertical-align: middle;
+  line-height: 100px
+}
