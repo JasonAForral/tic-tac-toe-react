@@ -1,3 +1,7 @@
+const  MARK_X = 1,
+  MARK_O = 2
+
+
 const { Component, PropTypes } = React
 
 class MyComponent extends Component {
@@ -23,9 +27,9 @@ class Square extends Component {
 
   getOccupier(data) {
     switch (data){
-      case 1:
+      case MARK_X:
         return 'X'
-      case 2:
+      case MARK_O:
         return 'O'
       default:
         return ''
@@ -70,9 +74,13 @@ class App extends Component {
     }
   }
   componentDidMount(){
+    var newData = Int8Array.from(this.state.data)
+    newData[0] = MARK_X 
+    console.log(this.state.data)
     console.log('pass')
     this.setState({
       ...this.state,
+      data: newData,
     })
   }
   render() {
